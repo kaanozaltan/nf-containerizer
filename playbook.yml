@@ -1,0 +1,15 @@
+- hosts: all
+  become: true
+tasks:
+  - name: pull and run ubuntu 16.04
+    community.docker.docker_container:
+        ports:
+        - 8000
+        - 8001
+        privileged: yes
+        restart: yes
+        hostname: ?
+        name: ?
+        image: ubuntu:16.04
+        command: run.sh
+      
