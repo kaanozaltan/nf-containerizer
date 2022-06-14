@@ -1,15 +1,13 @@
-- hosts: all
+- hosts: test-servers
   become: true
-tasks:
-  - name: pull and run ubuntu 16.04
-    community.docker.docker_container:
-        ports:
-        - 8000
-        - 8001
-        privileged: yes
-        restart: yes
-        hostname: ?
-        name: ?
-        image: ubuntu:16.04
-        command: run.sh
-      
+  become_user: root
+  gather_facts: true
+  tasks:
+    - name: copy dockerfile
+      copy: src=/home/kaan/Desktop/ulak-staj/Dockerfile dest=/home
+
+    - name: build docker image
+      command: docker build -t cnrudm /home
+
+    - name: run docker image
+      command: docker run cnrudm
