@@ -2,12 +2,22 @@
   become: true
   become_user: root
   gather_facts: true
+  vars:
+    nfs:
+      - cnrudr
+      - cnrudm
+      - cnramf
+      - cnrausf
+      - cnrupf
+
   tasks:
     - name: copy dockerfile
       copy: src=/home/kaan/Desktop/ulak-staj/Dockerfile dest=/home
 
     - name: build docker image
-      command: docker build -t cnrudm /home
+      command: docker build -t "{{ item }}" --build-arg nf="{{ item }}" /home
+      loop: "{{ nfs }}"
 
     - name: run docker image
-      command: docker run cnrudm
+      command: docker run -d "{{ item }}"
+      loop: "{{ nfs }}"
