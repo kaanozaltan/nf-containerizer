@@ -1,10 +1,18 @@
-- hosts: test-servers
+- name: build and run all nfs
+  hosts: test-servers
   become: true
   become_user: root
   gather_facts: true
   vars:
     nfs:
+      - cnrnrf-vnf
+      - cnrudr
       - cnrudm
+      - cnramf
+      - cnrsmf
+      - cnrausf
+      - cnrnssf
+      - cnrupf
 
   tasks:
     - name: copy dockerfile
@@ -13,13 +21,13 @@
     - name: copy build script
       copy: src=/home/kaan/Desktop/ulak-staj/build.sh dest=/home
 
-    - name: build docker image
+    - name: build docker images
       command: bash /home/build.sh "{{ item }}"
       loop: "{{ nfs }}"
 
-    - name: run docker image
+    - name: run docker images
       command: docker run -it -d --privileged=true "{{ item }}"
       loop: "{{ nfs }}"
 
     - name: remove build files
-      command: rm /home/Dockerfile /home/build.sh
+      command: rm /home/Dockerfile /home/build.sh 
