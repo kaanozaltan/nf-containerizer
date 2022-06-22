@@ -1,5 +1,5 @@
 - name: build and run all nfs
-  hosts: test-servers
+  hosts: test_servers
   become: true
   become_user: root
   gather_facts: true
@@ -13,21 +13,32 @@
       - cnrausf
       - cnrnssf
       - cnrupf
+    
+    pcfs:
+      - cnrpcfcs
+      - cnrpcfiws
+      - cnrpcfsms
+      - cnrpcfams
+      - cnrpcfnfrs
+      - cnrpcfpes
+      - cnrpcfoms
 
   tasks:
     - name: copy dockerfile
       copy: src=/home/kaan/Desktop/ulak-staj/Dockerfile dest=/home
 
-    - name: copy build script
-      copy: src=/home/kaan/Desktop/ulak-staj/build.sh dest=/home
+    - name: copy build-run script
+      copy: src=/home/kaan/Desktop/ulak-staj/build-run.sh dest=/home
 
-    - name: build docker images
-      command: bash /home/build.sh "{{ item }}"
+    - name: copy build-run script for pcf
+      copy: src=/home/kaan/Desktop/ulak-staj/build-run-pcf.sh dest=/home
+
+    - name: build and run docker images
+      command: bash /home/build-run.sh "{{ item }}"
       loop: "{{ nfs }}"
 
-    - name: run docker images
-      command: docker run -it -d --privileged=true "{{ item }}"
-      loop: "{{ nfs }}"
+    - name: build and run pcf docker image
+      command: bash /home/build-run-pcf.sh
 
     - name: remove build files
-      command: rm /home/Dockerfile /home/build.sh 
+      command: rm /home/Dockerfile /home/build-run.sh /home/build-run-pcf.sh 
