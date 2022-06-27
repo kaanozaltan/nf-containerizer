@@ -1,0 +1,70 @@
+cnrnrf-vnf:
+nc: connect to 172.17.0.2 port 8001 (tcp) failed: Connection refused
+Connection to 172.17.0.2 8006 port [tcp/*] succeeded!
+Connection to 172.17.0.2 8007 port [tcp/*] succeeded!
+Connection to 172.17.0.2 8010 port [tcp/*] succeeded!
+
+cnrudr:
+nc: connect to 172.17.0.3 port 5400 (tcp) failed: Connection refused
+
+cnrudm:
+nc: connect to 172.17.0.4 port 5000 (tcp) failed: Connection refused
+nc: connect to 172.17.0.4 port 5001 (tcp) failed: Connection refused
+nc: connect to 172.17.0.4 port 5002 (tcp) failed: Connection refused
+nc: connect to 172.17.0.4 port 5003 (tcp) failed: Connection refused
+nc: connect to 172.17.0.4 port 5004 (tcp) failed: Connection refused
+nc: connect to 172.17.0.4 port 5005 (tcp) failed: Connection refused
+
+cnramf:
+nc: connect to 172.17.0.5 port 6210 (tcp) failed: Connection refused
+nc: connect to 172.17.0.5 port 6211 (tcp) failed: Connection refused
+nc: connect to 172.17.0.5 port 6212 (tcp) failed: Connection refused
+nc: connect to 172.17.0.5 port 6213 (tcp) failed: Connection refused
+nc: connect to 172.17.0.5 port 6286 (tcp) failed: Connection refused
+nc: connect to 172.17.0.5 port 6287 (tcp) failed: Connection refused
+
+cnrsmf:
+nc: connect to 172.17.0.6 port 6110 (tcp) failed: Connection refused
+nc: connect to 172.17.0.6 port 6111 (tcp) failed: Connection refused
+nc: connect to 172.17.0.6 port 6122 (tcp) failed: Connection refused
+nc: connect to 172.17.0.6 port 6117 (tcp) failed: Connection refused
+nc: connect to 172.17.0.6 port 6112 (tcp) failed: Connection refused
+nc: connect to 172.17.0.6 port 6113 (tcp) failed: Connection refused
+nc: connect to 172.17.0.6 port 6121 (tcp) failed: Connection refused
+nc: connect to 172.17.0.6 port 6114 (tcp) failed: Connection refused
+nc: connect to 172.17.0.6 port 6115 (tcp) failed: Connection refused
+nc: connect to 172.17.0.6 port 6116 (tcp) failed: Connection refused
+nc: connect to 172.17.0.6 port 6118 (tcp) failed: Connection refused
+nc: connect to 172.17.0.6 port 6120 (tcp) failed: Connection refused
+nc: connect to 172.17.0.6 port 2152 (tcp) failed: Connection refused
+nc: connect to 172.17.0.6 port 6124 (tcp) failed: Connection refused
+nc: connect to 172.17.0.6 port 6123 (tcp) failed: Connection refused
+nc: connect to 172.17.0.6 port 6126 (tcp) failed: Connection refused
+nc: connect to 172.17.0.6 port 6127 (tcp) failed: Connection refused
+nc: connect to 172.17.0.6 port 6128 (tcp) failed: Connection refused
+nc: connect to 172.17.0.6 port 6129 (tcp) failed: Connection refused
+nc: connect to 172.17.0.6 port 6130 (tcp) failed: Connection refused
+nc: connect to 172.17.0.6 port 6990 (tcp) failed: Connection refused
+nc: connect to 172.17.0.6 port 6131 (tcp) failed: Connection refused
+nc: connect to 172.17.0.6 port 6133 (tcp) failed: Connection refused
+nc: connect to 172.17.0.6 port 6134 (tcp) failed: Connection refused
+nc: connect to 172.17.0.6 port 6135 (tcp) failed: Connection refused
+
+cnrausf:
+nc: connect to 172.17.0.7 port 5500 (tcp) failed: Connection refused
+nc: connect to 172.17.0.7 port 5501 (tcp) failed: Connection refused
+nc: connect to 172.17.0.7 port 5502 (tcp) failed: Connection refused
+
+cnrnssf:
+nc: connect to 172.17.0.8 port 8100 (tcp) failed: Connection refused
+nc: connect to 172.17.0.8 port 8101 (tcp) failed: Connection refused
+
+cnrupf:
+nc: connect to 172.17.0.9 port 1800 (tcp) failed: Connection refused
+nc: connect to 172.17.0.9 port 1801 (tcp) failed: Connection refused
+nc: connect to 172.17.0.9 port 1802 (tcp) failed: Connection refused
+nc: connect to 172.17.0.9 port 1803 (tcp) failed: Connection refused
+nc: connect to 172.17.0.9 port 1804 (tcp) failed: Connection refused
+nc: connect to 172.17.0.9 port 8443 (tcp) failed: Connection refused
+
+cnrnef:

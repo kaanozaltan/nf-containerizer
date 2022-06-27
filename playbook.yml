@@ -5,7 +5,15 @@
   gather_facts: true
   vars:
     nfs:
+      - cnrnrf-vnf
+      - cnrudr
+      - cnrudm
       - cnramf
+      - cnrsmf
+      - cnrausf
+      - cnrnssf
+      - cnrupf
+      - cnrnef
 
   tasks:
     - name: copy dockerfile
@@ -19,7 +27,6 @@
       command: bash /home/build-run.sh "{{ item }}"
       loop: "{{ nfs }}"
       ignore_errors: yes
-      no_log: True 
 
     - name: prepare report
       command: cat /home/report
