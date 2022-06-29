@@ -42,7 +42,7 @@ if [ "$res" != "exists" ]; then
     sleep 5
     ip=$(docker inspect -f '{{range.NetworkSettings.Networks}}{{.IPAddress}}{{end}}' $id)
     docker exec $id systemctl restart $1
-    ctl=$(docker exec $id systemctl status cnr* | grep 'service -\|active')
+    ctl=$(docker exec $id systemctl status cnr* | grep 'service -\|Active')
 
     echo -e $"$1:\n$ctl" >> /home/report
     for port in ${!var}; do
