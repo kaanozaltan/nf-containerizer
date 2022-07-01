@@ -29,6 +29,11 @@
     - name: copy build-run script
       copy: src=build-run.sh dest=/home
 
+    - name: copy json files
+      copy:
+        src: sto_settings
+        dest: /home
+
     # may give error if port connection test fails
     - name: build and run docker images
       command: bash /home/build-run.sh "{{ item }}"
