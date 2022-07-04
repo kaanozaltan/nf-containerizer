@@ -14,7 +14,7 @@
             "interPlmnFqdn": "",
             "ipEndPoints": {
                 "0": {
-                    "ipv4Address": "{{ tnrfipc }}",
+                    "ipv4Address": "172.17.0.2",
                     "ipv6Address": "",
                     "port": "8005",
                     "transport": ""
@@ -48,7 +48,7 @@
             "interPlmnFqdn": "",
             "ipEndPoints": {
                 "0": {
-                    "ipv4Address": "{{ tnrfipc }}",
+                    "ipv4Address": "172.17.0.2",
                     "ipv6Address": "",
                     "port": "8007",
                     "transport": ""
@@ -82,7 +82,7 @@
             "interPlmnFqdn": "",
             "ipEndPoints": {
                 "0": {
-                    "ipv4Address": "{{ tnrfipc }}",
+                    "ipv4Address": "172.17.0.2",
                     "ipv6Address": "",
                     "port": "8009",
                     "transport": ""
@@ -116,7 +116,7 @@
             "interPlmnFqdn": "",
             "ipEndPoints": {
                 "0": {
-                    "ipv4Address": "{{ tnrfipc }}",
+                    "ipv4Address": "172.17.0.2",
                     "ipv6Address": "",
                     "port": "8010",
                     "transport": ""
@@ -275,7 +275,7 @@
         "heartBeatTimer": "3",
         "interPlmnFqdn": "",
         "ipv4Addresses": {
-            "0": "{{ tnrfipc }}"
+            "0": "172.17.0.2"
         },
         "ipv6Addresses": "[]",
         "load": "0",
@@ -301,7 +301,7 @@
                 "interPlmnFqdn": "",
                 "ipEndPoints": {
                     "0": {
-                        "ipv4Address": "{{ tnrfipc }}",
+                        "ipv4Address": "172.17.0.2",
                         "ipv6Address": "fe80::a00:27ff:feae:3fc8%eps0s8",
                         "port": "8001",
                         "transport": ""
@@ -339,7 +339,7 @@
                 "interPlmnFqdn": "",
                 "ipEndPoints": {
                     "0": {
-                        "ipv4Address": "{{ tnrfipc }}",
+                        "ipv4Address": "172.17.0.2",
                         "ipv6Address": "",
                         "port": "8006",
                         "transport": ""

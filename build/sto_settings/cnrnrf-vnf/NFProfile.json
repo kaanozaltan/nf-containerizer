@@ -18,7 +18,7 @@
     ],
     
 	"ipv4Addresses": [
-        "10.10.33.81"
+        "172.17.0.2"
     ],  
    
     "load": 0,
@@ -30,7 +30,7 @@
            
             "ipEndPoints": [
                 {
-		    "ipv4Address":"10.10.33.81",
+		    "ipv4Address":"172.17.0.2",
                   
                     "port": 8001
                     
@@ -55,7 +55,7 @@
       
             "ipEndPoints": [
                 {	
-                    "ipv4Address":"10.10.33.81",
+                    "ipv4Address":"172.17.0.2",
 		
                    
                     "port": 8006
