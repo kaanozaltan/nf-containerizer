@@ -58,8 +58,10 @@ if [ "$res" != "exists" ]; then
     # pull and run mongo and posgres (only once)
     if [ "$1" == "cnrnrf-vnf" ]; then
         docker pull mongo && docker pull postgres
-        mongo_id=$(docker run -it -d -p 27017 mongo)
+        mongo_id=$(docker run -it -d -p 27017 --name cinardb mongo)
         postgres_id=$(docker run -e POSTGRES_PASSWORD=1 -d -p 5432:5432 postgres)
+        docker exec cinardb sed -i 's/127.0.0.1/0.0.0.0/' /etc/mongod.conf.orig
+        docker exec cinardb mongo --eval 'db.createUser({user:"cnrusr",pwd:"P5vKG6vE",roles:["userAdminAnyDatabase"]})' admin
     fi
 
     # create db and user in mongo
@@ -74,6 +76,11 @@ if [ "$res" != "exists" ]; then
         nc -zv $ip $port >> /build/report 2>&1
     done
     echo -e $"" >> /build/report
+
+    if [ "$1" == "cnrpcfsms" ]; then
+        echo -e $"NFs registered to NRF:\n$(docker exec cinardb mongo --eval \
+        'db.cinarnfcollection.find({ nfStatus: "REGISTERED" }, { nfType: 1 }).pretty()' stonrfcommon | grep _id)" >> /build/report
+    fi
 else
     cid=$(docker ps -f status=exited | grep $1 | awk '{ print $1 }')
     if [ "$cid" != "" ]; then

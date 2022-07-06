@@ -34,7 +34,7 @@
 
     "NRF": [
         {
-            "IPAddress": "1.1.1.1",
+            "IPAddress": "1.1.1.1", // 1.1.1.1
             "ClientCount": 4,
             "ClientTimeout": 500,
             "NfmServicePort": 8001,

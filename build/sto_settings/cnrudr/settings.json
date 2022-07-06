@@ -50,7 +50,7 @@
         "ClientTimeout": 3000,
         "DiscServicePort": 8006,
         "FQDN": "",
-        "IPAddress": "10.10.33.81",
+        "IPAddress": "172.17.0.2",
         "NfmServicePort": 8001,
         "OAuth2ServicePort": 8007,
         "TAccessTokenPeriod": 1000,

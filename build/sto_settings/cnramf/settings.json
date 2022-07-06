@@ -19,7 +19,7 @@
             "DBSettings": {
                 "dbname": "AmfPerformansSto",
                 "dbtype": "mongo",
-                "host": "10.10.31.19",
+                "host": "172.17.0.3",
                 "password": "P5vKG6vE",
                 "port": 27017,
                 "username": "cnrusr"

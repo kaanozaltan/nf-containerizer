@@ -1,7 +1,2 @@
 [test_servers]
-ansible_become_pass=1
-
-[all:vars]
-ansible_connection=ssh
-ansible_user=root
-ansible_ssh_pass=1
+192.168.96.129    ansible_become_pass=1

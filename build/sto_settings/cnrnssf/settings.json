@@ -32,7 +32,7 @@
     },
     "NRF": [
         {
-            "IPAddress": "10.10.33.81",
+            "IPAddress": "172.17.0.2",
             "ClientCount": 4,
             "ClientTimeout": 3000,
             "NfmServicePort": 8001,
@@ -46,7 +46,7 @@
     ],
     "Database": {
         "DatabaseType": "MONGO",
-        "Server": "10.10.31.19",
+        "Server": "172.17.0.3",
         "Port": 27017,
         "DatabaseName":"stonssf",
         "UserName": "cnrusr",
