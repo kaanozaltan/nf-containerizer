@@ -30,7 +30,7 @@
 
     # may give error if port connection test fails
     - name: build and run docker images
-      command: bash /build/build-run.sh "{{ item }}"
+      command: bash /build/build-run.sh KT_CN_001 "{{ item }}"
       loop: "{{ nfs }}"
       ignore_errors: yes
 
